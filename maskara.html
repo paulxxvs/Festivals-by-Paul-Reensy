@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVERALL WEBSITE</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background: url('B.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+        h2, p {
+            opacity: 0;
+            animation: fadeIn 2.5s forwards;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.5s ease-in-out;
+        }
+        .btn:hover {
+            background: #e68900;
+            transform: scale(1.1);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.5s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+        }
+        .slide {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        h2 {
+    opacity: 0;
+    animation: fadeIn 2.5s forwards;
+    background-color: rgba(255, 152, 0, 0.8); /* Orange background with slight transparency */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    {
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="pic2" class="falls-2">
+            <div class="slideshow-container">
+                <img class="slide active" src="maskara.jpg" alt="MASSKARA FESTIVAL">
+            </div>
+            <br><br>
+            <h2>MASSKARA FESTIVAL</h2>
+            <p>The MassKara Festival is a colorful, annual celebration in Bacolod City, Philippines that features parades, street dancing, and live music. The festival is known for its smiling masks and costumes.</p>
+            <div class="nav-buttons">
+                <a href="bangus.html" class="btn">PREVIOUS</a>
+                <a href="tuna.html" class="btn">NEXT</a>
+            </div>
+        </section>
+    </div>
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.classList.remove("active"));
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add("active");
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <font face="times new roman">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Festivals</title>
+    <style>
+        /* Apply styles to the entire page */
+        body {
+            background: url('B.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Background animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Style container for better readability */
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+            animation: slideIn 1.2s ease-out;
+        }
+
+        /* Container slide-in animation */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 28px;
+            animation: glow 2s infinite alternate;
+        }
+
+        /* Heading glow effect */
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+            }
+            to {
+                text-shadow: 2px 2px 20px rgba(255, 215, 0, 1);
+            }
+        }
+
+        /* Style for ordered list */
+        ol {
+            text-align: left;
+            margin: 20px auto;
+            padding: 0;
+            width: 80%;
+            list-style: none;
+            counter-reset: list-counter;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-left: 5px solid #FFD700;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            counter-increment: list-counter;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: fadeInLeft 0.8s forwards;
+        }
+
+        /* List item animation */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        li::before {
+            content: counter(list-counter) ".";
+            font-weight: bold;
+            color: #FFD700;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Hover effect on list items */
+        li:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        /* Button style */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #ff6600;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #cc5500;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>LIST OF FESTIVALS IN THE PHILIPPINES</h2>
+        <ol>
+            <li style="animation-delay: 0.2s;">Sinulog Festival</li>
+            <li style="animation-delay: 0.4s;">Dinagyang Festival</li>
+            <li style="animation-delay: 0.6s;">Panagbenga Festival</li>
+            <li style="animation-delay: 0.8s;">Ati-Atihan Festival</li>
+            <li style="animation-delay: 1.0s;">Bangus Festival</li>
+            <li style="animation-delay: 1.2s;">Masskara Festival</li>
+            <li style="animation-delay: 1.4s;">Tuna Festival</li>
+            <li style="animation-delay: 1.6s;">Kadayawan Festival</li>
+            <li style="animation-delay: 1.8s;">Giant Lantern Festival</li>
+            <li style="animation-delay: 2.0s;">Higantes Festival</li>
+        </ol>
+        <h2>THAT'S ALL THANK YOU!🤍</h2>
+    </div>
+</body>
+</html>
